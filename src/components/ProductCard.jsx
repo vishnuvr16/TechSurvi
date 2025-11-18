@@ -21,10 +21,7 @@ export default function ProductCard({ product }) {
         to={`/product/${product.id}`} 
         className="flex bg-slate-700 rounded-lg justify-center items-center py-4 h-56 w-full"
       >
-        <div 
-          className="rounded-lg p-2 flex items-center justify-center h-full w-full overflow-hidden 
-                     hover:scale-105 transition-transform duration-500 relative"
-        >
+        
           {/* while image loading it will display this */}
           {!imageLoaded && (
             <div className="absolute inset-0 flex items-center justify-center bg-slate-700 rounded-lg animate-pulse">
@@ -39,7 +36,6 @@ export default function ProductCard({ product }) {
             onLoad={() => setImageLoaded(true)}
             onError={() => setImageLoaded(true)} 
           />
-        </div>
       </Link>
 
       <div className="mt-4 flex flex-col flex-grow">
