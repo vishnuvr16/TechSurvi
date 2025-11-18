@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
+import Footer from "./components/Footer";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   return (
@@ -14,11 +16,10 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-      <footer className="bg-white border-t mt-6">
-        <div className="container mx-auto p-4 text-sm text-gray-500">© {new Date().getFullYear()} TechSurvi Store</div>
-      </footer>
+      <Footer />
     </div>
   );
 }
