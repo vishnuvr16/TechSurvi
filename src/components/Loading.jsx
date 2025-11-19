@@ -3,7 +3,7 @@ import { Loader } from 'lucide-react';
 
 export default function Loading({ text = "Loading..." }) {
   return (
-    <div className="w-full py-20 flex justify-center items-center">
+    <div className="bg-slate-700 w-full py-20 flex justify-center items-center">
       <div className="flex flex-col items-center space-y-4">
         
         <div className="relative">

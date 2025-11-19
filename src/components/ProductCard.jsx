@@ -22,13 +22,6 @@ export default function ProductCard({ product }) {
         className="flex bg-slate-700 rounded-lg justify-center items-center py-4 h-56 w-full"
       >
         
-          {/* while image loading it will display this */}
-          {!imageLoaded && (
-            <div className="absolute inset-0 flex items-center justify-center bg-slate-700 rounded-lg animate-pulse">
-              <ImageIcon className="w-10 h-10 text-gray-500" />
-            </div>
-          )}
-
           <img 
             src={product.image} 
             alt={product.title} 

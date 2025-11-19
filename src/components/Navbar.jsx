@@ -8,6 +8,8 @@ export default function Navbar() {
 
   const totalCount = Object.values(cartItems).reduce((sum, it) => sum + it.quantity, 0);
 
+  const uniqueProductCount = Object.keys(cartItems).length;
+
   return (
     <nav className="bg-slate-900 shadow-xl border-b border-sky-500/50">
       <div className="container mx-auto px-6 lg:px-8 py-4 flex justify-between items-center">
@@ -41,7 +43,7 @@ export default function Navbar() {
             <span 
               className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-rose-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center ring-2 ring-slate-900"
             >
-              {totalCount}
+              {uniqueProductCount}
             </span>
           </Link>
         </div>
